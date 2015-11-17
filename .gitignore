@@ -1,0 +1,11 @@
+# My configurations:
+*~
+*.tcl
+*.v
+*.io
+classes
+eecs427
+eecs478
+.cadence
+.simvision
+

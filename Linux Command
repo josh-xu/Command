@@ -1,0 +1,185 @@
+-----------------------EECS427--------------------------------
+--------------------------------------------------------------
+
+cd ~
+rm -rf *.cdslck
+
+cd ~/classes/eecs427/group8/CAD*
+find . -name '*.cdslck' -exec rm {} \;
+find . -name '*.oacache' -exec rm {} \;
+
+cd ~/classes/eecs427/group8/CAD*
+virtuoso &
+
+-----------------------EECS478--------------------------------
+--------------------------------------------------------------
+
+Makefile (write - first!)
+
+cp -r synth_tutorial7 ../f15/xujiang/CAD6 (copy from directory to directory)
+cp file directory
+
+ln -s /afs/umich.edu/class/eecs427/ibm13/resource ./ (./ represent present path; ../ represent upper present path)
+
+-----------------------Terminal-------------------------------
+--------------------------------------------------------------
+
+sudo su (enter root mode)
+sudo passwd (set root password)
+
+/ (root directory)
+~ (home directory)
+pwd
+cd
+clear
+
+ls
+ls -a (include hidden files)
+ls -l (details: time stamp)
+ls -al (all details)
+
+touch myfile
+mkdir mydir
+rm myfile
+rm -r mydir (-r = recursive; no undo)
+
+mv file directory
+move myfile mynewfile (rename)
+
+f11 (full screen)
+
+exit
+
+ctrl+shift+t (open new terminal)
+Tab (automatic fill!!!)
+ctrl+a (begin of command)
+ctrl+e (end of command)
+ctrl+c (end process, can also use to clear current input command)
+ctrl+pageup (change tab right)
+ctrl+pageup (change tab left)
+ctrl+shift+c (copy)
+ctrl+shift+v (paste)
+
+-----------------------Linux----------------------------------
+--------------------------------------------------------------
+
+ctrl+alt+f2 (go to command line mode)
+ctrl+alt+f1 (go to GUI mode)
+
+ctrl+d (explorer: add to filebrowser as quick starter)
+super+d (show desktop) (super = windows button)
+
+/usr/share/backgrounds
+
+ctrl+alt+right (change to right workspace)
+ctrl+alt+left (change to left workspace)
+
+alt+f4 (close current window)
+
+ctrl+alt+delete (log out)
+ctrl+alt+delete (lock screen)
+
+ps -A (list all the running program)
+kill -9 # (kill certain program)
+
+-----------------------CAEN Remote----------------------------
+--------------------------------------------------------------
+
+oncampus-course.engin.umich.edu
+
+ssh xujiang@oncampus-course.engin.umich.edu
+ssh -Y xujiang@oncampus-course.engin.umich.edu
+
+sudo apt-get install git
+sudo apt-get install vim
+sudo apt-get install nautilus-open-terminal
+
+http://caen.engin.umich.edu/connect/linux-login-service
+http://caenfaq.engin.umich.edu/12374-Linux-Login-Service/how-do-i-connect-to-the-linux-login-service-using-secure-shell-ssh
+
+-----------------------Gedit----------------------------------
+--------------------------------------------------------------
+
+gedit *.cpp *.h &
+
+ctrl+m (comment)
+ctrl+shift+m (uncomment)
+ctrl+shift+pageup (change tab right, not the same sa terminal)
+ctrl+shift+pageup (change tab left)
+
+-----------------------Git------------------------------------
+--------------------------------------------------------------
+
+git init
+
+git remote add origin https://github.com/josh-xu/Command.git
+git remote -v
+
+git add . (add new file)
+git add -u (updates renamed or deleted files)
+git add --all (all, recommended!)
+
+git commit -m "message"
+
+git clone https://github.com/josh-xu/Command.git
+git pull
+git push origin master (push master to origin)
+git push origin dev
+git push -u origin master (use in first push)
+
+git status
+git log
+git log --pretty=oneline
+git log --graph --pretty=oneline --abbrev-commit (see branch merge graph log)
+
+git reset --hard HEAD^
+git reset --hard HEAD^^
+git reset --hard HEAD~100
+git reset --hard #
+git reflog (history of git command)
+
+/***branch manipulation @branch***/
+/********************************/
+git branch (see the current branch)
+git checkout -b dev (create new branch, and switch to it)
+git checkout master (switch back to master branch)
+
+git branch -d dev (delete dev branch)
+git branch -D feature (delete unmerged feature branch)
+
+git checkout -b dev origin/dev (push origin dev; git pull)
+git branch --set-upstream dev origin/dev
+
+/***branch manipulation @merge***/
+/********************************/
+git merge dev (current in master, merge master with dev branch)
+git merge --no-ff -m "merge with no-ff" dev
+(no fast forward merge, commit at the same time, save the commit in dev after deletion, can see the merge process in log graph)
+
+/***bug fixing***/
+/****************/
+git stash (save current working status, in current branch, used to save bug when the dev is not finished)
+git stash list
+git stash pop (restore the most top one)
+
+git stash apply stash@{#}
+git stash drop stash@{#}
+
+git config --global user.name josh-xu
+git config --global user.email xujiang@umich.edu
+git config --list
+
+git config --global credential.helper store (http password store for linux)
+.git credentials (https://josh-xu:password@github.com)
+
+git config core.autocrlf true
+
+git config --global color.ui true
+git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.ci commit
+git config --global alias.br branch
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+--------------------------------------------------------------
+--------------------------------------------------------------
