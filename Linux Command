@@ -46,6 +46,8 @@ rm -r mydir (-r = recursive; no undo)
 mv file directory
 move myfile mynewfile (rename)
 
+diff file1 file2 (if the same, will not output anything)
+
 f11 (full screen)
 
 exit
