@@ -11,15 +11,21 @@ find . -name '*.oacache' -exec rm {} \;
 cd ~/classes/eecs427/group8/CAD*
 virtuoso &
 
------------------------EECS478--------------------------------
---------------------------------------------------------------
-
 Makefile (write - first!)
 
 cp -r synth_tutorial7 ../f15/xujiang/CAD6 (copy from directory to directory)
 cp file directory
 
 ln -s /afs/umich.edu/class/eecs427/ibm13/resource ./ (./ represent present path; ../ represent upper present path)
+
+-----------------------EECS478--------------------------------
+--------------------------------------------------------------
+
+tar -xvf eecs478p1.tar.gz
+./project1 (run program)
+
+tar -cvf EECS478P2_xujiang.tar EECS478P2_xujiang
+gzip EECS478P2_xujiang.tar
 
 -----------------------Terminal-------------------------------
 --------------------------------------------------------------
