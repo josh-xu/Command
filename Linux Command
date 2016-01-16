@@ -18,6 +18,8 @@ cp file directory
 
 ln -s /afs/umich.edu/class/eecs427/ibm13/resource ./ (./ represent present path; ../ represent upper present path)
 
+.bashrc & .bash_profile (content deleted, then terminal will not crash, strange...)
+
 -----------------------EECS478--------------------------------
 --------------------------------------------------------------
 
